@@ -7,6 +7,9 @@ if not cap.isOpened():
     print("Error: Could not open webcam.")
     exit()
 
+
+deepface_emotions = ['angry', 'happy', 'sad','neutral']
+
 while True:
     ret, frame = cap.read()
     if not ret:
@@ -16,10 +19,19 @@ while True:
     resized_frame = cv2.resize(frame, (1080,1080))
 
     try:
-        result = DeepFace.analyze(img,actions=['emotion'])
+        result = DeepFace.analyze(
+            resized_frame,
+            actions=['emotion'],
+            enforce_detection=False
+        )
 
-        if result:            
-            dominant_emotion = result[0]["dominant_emotion"]
+        if result:
+            emotions = {
+                emotion: result[0]['emotion'].get(emotion, 0)
+                for emotion in deepface_emotions
+            }
+
+            dominant_emotion = max(emotions, key=emotions.get)
             cv2.putText(
                 frame,
                 f"Emotion: {dominant_emotion}",
@@ -36,7 +48,7 @@ while True:
 
     cv2.imshow('Emotion Detection', frame)
 
-    if cv2.waitKey(1) & 0xFF == 27:  
+    if cv2.waitKey(1) & 0xFF == 27:  # ESC key
         break
 
 cap.release()
