@@ -1,89 +1,70 @@
-# Projects
-this repository contains the projects that i did on my own 
-### the projects are 
-  #### 1. Emotion Recognition
-        The emotion recognition project contains the code in python to recognize the
-        facial expressions of a human.
+# Project Repository
 
-        This project uses the packages such as 
-        1. opencv
-          The cv2 module from OpenCV is used to capture input from the webcam, display the 
-          processed output, and write text or visual information directly onto the output frame.
-        2. deepface
-           DeepFace module from deepface is a lightweight Python framework used for facial recognition and facial
-           attribute analysis, such as age, gender, emotion, and race estimation. It simplifies
-           complex computer vision tasks by providing a high-level interface over multiple state-of-the-art
-           deep learning models, allowing developers to implement facial analysis features with minimal code.
-           
+This repository contains projects that I have developed independently to explore computer vision, deep learning, and natural language processing applications.
 
-  #### 2. Waste Recognition System
-        The Waste recognition system project contains the code in python to
-        recognize the waste objects through webcam
+## 1. Emotion Recognition
 
-        This project uses the packages such as
-        1. opencv
-           The cv2 module from OpenCV is used to capture input from the webcam, display the 
-          processed output, and write text or visual information directly onto the output frame.
-        2. torch
-            PyTorch is the core deep-learning library. It handles tensors (large numerical arrays),
-            runs neural networks, performs all mathematical operations, and manages CPU/GPU execution.
-            Any model inference or training, including CLIP, fundamentally depends on torch.
-        3. torchvision
-            Torchvision is PyTorch’s computer-vision companion. It provides image datasets,
-            pretrained vision models, and common image transformations. Even when not used directly, 
-            many vision pipelines and models rely on it for image handling utilities.
-        4. transformers
-            Transformers is the Hugging Face library that provides ready-made state-of-the-art models
-            like CLIP, BERT, and GPT. It handles model loading, tokenization, and preprocessing so you
-            can use powerful AI models without implementing them from scratch.
-        5. pillow
-            Pillow is an image processing library that works with image objects (PIL images).
-            It is mainly used to convert images between formats, especially when moving data 
-            from OpenCV (NumPy arrays) to models like CLIP that expect PIL images in RGB format.
+The Emotion Recognition project contains Python code to recognize human facial expressions using a webcam.
 
-            
-  #### 3. RAG Based Legal Document Analysis 
-         This project is useful to analyse the legal documents that is provided to it such as FIR's
-         and gives the strategies that the client side lawyers are supposed to follow
+Packages Used
 
-         This project uses the packages such as
-        1. streamlit
-            Streamlit is used to build simple web-based user interfaces directly in Python.
-            It helps display outputs, manage user interaction, and maintain chat history in 
-            an interactive app format without writing HTML or JavaScript.
-        2. langchain-community
-           LangChain Community provides integrations for chat models, document loaders, and 
-           vector stores. In this project, it enables interaction with Ollama-based language
-           models, loading text and PDF documents, managing chat history, and storing embeddings
-           in a vector database.
-        3. langchain-core
-           LangChain Core contains the fundamental building blocks such as prompt templates, 
-           output parsers, and runnable chains. It is responsible for structuring prompts,
-           controlling how the model receives instructions, and converting the model’s responses 
-           into usable text.
-        4. langchain-text-splitters
-           This package is used to divide large documents into smaller overlapping chunks.
-           Splitting is necessary to process long legal documents efficiently while maintaining
-           enough context for accurate retrieval and reasoning.
-        5. langchain-ollama
-           LangChain Ollama provides support for embedding models and chat models that run locally 
-           through Ollama. It is used to generate embeddings and connect the application to locally
-           hosted large language models.
-        6. chromadb
-           ChromaDB is the vector database used to store and retrieve document embeddings.
-           It enables similarity-based search so that only the most relevant document sections 
-           are used during legal analysis.
-        7. ollama
-           Ollama is the local model runtime that serves large language models and embedding models.
-           It allows the application to run LLaMA and embedding models locally without relying on external 
-           APIs.
-        8. llama3.3: latest
-           LLaMA 3.3 is a locally hosted large language model served through Ollama.
-           In this project, it is used as the core reasoning engine to understand documents,
-           generate summaries, perform legal analysis under the Bharatiya Nyaya Sanhita (BNS), 
-           and produce structured, human-readable responses. The latest tag ensures the most 
-           recent optimized version of the model is used for better accuracy, reasoning quality, 
-           and performance during inference.
+OpenCV (cv2)
+The cv2 module from OpenCV is used to capture input from the webcam, display the processed output, and write text or visual information directly onto the output frame.
 
-           
-#### author: Raavinuthala Sai Praneeth Karthikeya
+DeepFace
+DeepFace is a lightweight Python framework used for facial recognition and facial attribute analysis such as age, gender, emotion, and race estimation. It simplifies complex computer vision tasks by providing a high-level interface over multiple state-of-the-art deep learning models, allowing facial analysis to be implemented with minimal code.
+
+## 2. Waste Recognition System
+
+The Waste Recognition System project contains Python code to recognize waste objects in real time using a webcam.
+
+Packages Used
+
+OpenCV (cv2)
+The cv2 module from OpenCV is used to capture input from the webcam, display the processed output, and write text or visual information directly onto the output frame.
+
+Torch
+PyTorch is the core deep-learning library used in this project. It handles tensor operations, runs neural networks, performs mathematical computations, and manages CPU/GPU execution. All model inference in this project depends on PyTorch.
+
+Torchvision
+Torchvision is PyTorch’s computer vision companion. It provides pretrained vision models, datasets, and common image transformations that support vision-based deep learning workflows.
+
+Transformers
+Transformers is the Hugging Face library that provides access to state-of-the-art models such as CLIP, BERT, and GPT. It handles model loading, preprocessing, and tokenization, enabling advanced AI capabilities without building models from scratch.
+
+Pillow
+Pillow is an image processing library used to handle image objects. It is mainly used to convert images between formats, especially when transferring frames from OpenCV (NumPy arrays) to models like CLIP that expect PIL images in RGB format.
+
+## 3. RAG-Based Legal Document Analysis
+
+This project analyzes legal documents such as FIRs and generates strategic legal insights to assist client-side lawyers. It uses a Retrieval-Augmented Generation (RAG) approach to ground responses in relevant legal documents.
+
+Packages Used
+
+Streamlit
+Streamlit is used to build a simple web-based user interface in Python. It enables interactive display of outputs, user input handling, and readable presentation of results without requiring frontend development.
+
+LangChain Community
+LangChain Community provides integrations for chat models, document loaders, and vector stores. In this project, it is used to interact with Ollama-based language models, load text and PDF documents, manage chat history, and store embeddings.
+
+LangChain Core
+LangChain Core contains the foundational components such as prompt templates, output parsers, and runnable chains. It controls prompt structure and ensures the model’s responses are converted into usable text.
+
+LangChain Text Splitters
+This package is used to split large legal documents into smaller overlapping chunks. Chunking is essential for efficient retrieval while preserving enough context for accurate reasoning.
+
+LangChain Ollama
+LangChain Ollama provides support for chat and embedding models that run locally via Ollama. It is used to generate embeddings and connect the application to locally hosted language models.
+
+ChromaDB
+ChromaDB is a vector database used to store and retrieve document embeddings. It enables similarity-based search so that only the most relevant document sections are used during legal analysis.
+
+Ollama
+Ollama is the local runtime used to serve large language models and embedding models. It allows all inference to run locally without relying on external APIs.
+
+LLaMA 3.3 (latest)
+LLaMA 3.3 is a locally hosted large language model served through Ollama. In this project, it acts as the core reasoning engine to understand legal documents, generate summaries, perform analysis under the Bharatiya Nyaya Sanhita (BNS), and produce structured, human-readable legal strategies. The latest tag ensures the most recent optimized version of the model is used.
+
+## Author
+
+Raavinuthala Sai Praneeth Karthikeya
