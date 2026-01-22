@@ -48,7 +48,7 @@ while True:
 
     cv2.imshow('Emotion Detection', frame)
 
-    if cv2.waitKey(1) & 0xFF == 27:  # ESC key
+    if cv2.waitKey(1) & 0xFF == 27: 
         break
 
 cap.release()
