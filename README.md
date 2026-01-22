@@ -1,7 +1,7 @@
-# projects
+# Projects
 this repository contains the projects that i did on my own 
 ### the projects are 
-  #### 1. emotion recognition
+  #### 1. Emotion Recognition
         The emotion recognition project contains the code in python to recognize the
         facial expressions of a human.
 
@@ -16,7 +16,7 @@ this repository contains the projects that i did on my own
            deep learning models, allowing developers to implement facial analysis features with minimal code.
            
 
-  #### 2. Waste Recognition system
+  #### 2. Waste Recognition System
         The Waste recognition system project contains the code in python to
         recognize the waste objects through webcam
 
